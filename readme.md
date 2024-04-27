@@ -1,17 +1,18 @@
 # Wi-Fi Reconnector
 
-Wi-Fi Reconnector is a PowerShell script designed to help users quickly disconnect and reconnect to a Wi-Fi network. It's useful for situations where the Wi-Fi connection becomes unstable and needs to be reset.
+Wi-Fi Reconnector is a PowerShell script developed to efficiently manage fluctuating Wi-Fi connections, primarily addressing network-related issues. Inspired by personal experiences of intermittent internet connectivity due to network instability, this script empowers users to swiftly toggle their Wi-Fi connection on and off, facilitating smoother network transitions.
 
 ## Features
 
-- Disconnects and reconnects to a specified Wi-Fi network.
-- Provides a countdown timer for cancellation.
+- Quickly disconnect and reconnect to a specified Wi-Fi network.
+- Includes a countdown timer for easy cancellation of the operation.
 
 ## Usage
 
-1. Download the script file (`Wi-fiIdolReconnect.ps1`) from this repository.
-2. Open Windows PowerShell with administrator privileges.
-3. Navigate to the directory where the script file is located.
-4. Run the script by typing the following command and pressing Enter:
+1. Begin by downloading the script file (`Wi-Fi Reconnector.ps1`) from this repository.
+2. Launch Windows PowerShell with administrator privileges.
+3. Navigate to the directory housing the script file.
+4. Execute the script by inputting the following command and hitting Enter:
    ```powershell
-   .\Wi-fiIdolReconnect.ps1
+   .\Wi-Fi Reconnector.ps1
+Alternatively, you can right-click the script file and select "Run with PowerShell" for convenience.
