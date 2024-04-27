@@ -1,0 +1,36 @@
+[33mcommit 82e92b54919a324be1ecaa13b0c208a7b1d50444[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Merge: 458d050 eb3b67a
+Author: Tyson <tysonsylvester123@gmail.com>
+Date:   Sat Apr 27 14:43:29 2024 -0500
+
+    Merge branch 'master'
+
+[33mcommit eb3b67a7be539442d164a4a3a114efe0dcf4ad7f[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Tyson <tysonsylvester123@gmail.com>
+Date:   Sat Apr 27 14:38:42 2024 -0500
+
+    Updated the read me to be more concise
+
+[33mcommit 458d050e84ed9db90d1fd4be4a910581979435e4[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Tyson Sylvester <tysonsylvester123@gmail.com>
+Date:   Sat Apr 27 14:32:33 2024 -0500
+
+    Create README.md
+
+[33mcommit 490f4211f353b3d57c47af326e64cfb4d8ca68b0[m[33m ([m[1;33mtag: 1.0[m[33m)[m
+Author: Tyson <tysonsylvester123@gmail.com>
+Date:   Sat Apr 27 12:18:54 2024 -0500
+
+    Add to the read me and main Powershell script that was supposed to be there.
+
+[33mcommit 0e3d63cc9648aef93076b4a1b02bcea4c528be6a[m
+Author: Tyson <tysonsylvester123@gmail.com>
+Date:   Sat Apr 27 12:02:43 2024 -0500
+
+    Add Wi-Fi Reconnector.ps1 and README.md
+
+[33mcommit 6d3ad1c9b47d1f4673dcfec6fa5a11d5bcce7451[m
+Author: Tyson Sylvester <tysonsylvester123@gmail.com>
+Date:   Sat Apr 27 11:59:48 2024 -0500
+
+    Initial commit
