@@ -15,11 +15,17 @@ Wi-Fi Reconnector is a PowerShell script designed to manage fluctuating Wi-Fi co
 
 3. **Navigate to Script Directory:** Navigate to the directory housing the script file.
 
-4. **Enter SSID Accurately:** Enter the SSID (Wi-Fi network name) accurately. If the SSID contains spaces or special characters, enclose it in quotes.
-
-5. **Execute Script:**
+4. **Execute Script:**
    - Execute the script by entering the following command and pressing Enter:
      ```powershell
      .\Wi-Fi Reconnector.ps1
      ```
    - Alternatively, for convenience, you can right-click the script file and select "Run with PowerShell".
+
+5. **Follow On-Screen Instructions:**
+   - Input your Wi-Fi network SSID accurately as prompted.
+   - Ensure correct spelling and capitalization of your SSID. Incorrect input may result in the script failing to reconnect to your Wi-Fi network.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
