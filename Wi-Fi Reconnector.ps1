@@ -1,34 +1,42 @@
+# Function to play success tone
+function Play-SuccessTone {
+    [console]::Beep(800, 500) # Play a beep tone
+    Start-Sleep -Milliseconds 200
+    [console]::Beep(1200, 300) # Play ascending tone
+    Start-Sleep -Milliseconds 200
+    [console]::Beep(1600, 300)
+}
+
+# Function to play failure tone
+function Play-FailureTone {
+    1..3 | ForEach-Object {
+        [console]::Beep(300, 100) # Play a rapid sequence of lower-pitched beeps
+        Start-Sleep -Milliseconds 100
+    }
+}
+
 # Function to disconnect from Wi-Fi network
 function Disconnect-WiFi {
     try {
-        Write-Debug "Attempting to disconnect from Wi-Fi network '$global:WiFiNetworkName'..."
-        netsh wlan disconnect
-        Write-Debug "Disconnected from Wi-Fi network '$global:WiFiNetworkName'."
+        netsh wlan disconnect | Out-Null
+        Play-FailureTone # Play failure tone
     } catch {
-        Write-Debug "Failed to disconnect from Wi-Fi network '$global:WiFiNetworkName'. Error: $_"
+        Play-FailureTone # Play failure tone
     }
 }
 
 # Function to reconnect to Wi-Fi network
 function Reconnect-WiFi {
     try {
-        Write-Debug "Attempting to reconnect to Wi-Fi network '$global:WiFiNetworkName'..."
-        $result = netsh wlan connect name="$global:WiFiNetworkName"
-        Write-Debug "Reconnect result: $result"
+        $result = netsh wlan connect name="$global:WiFiNetworkName" | Out-Null
         if ($result -match "successfully") {
-            Write-Debug "Reconnected to Wi-Fi network '$global:WiFiNetworkName'."
+            Play-SuccessTone # Play success tone
         } else {
-            Write-Debug "Failed to reconnect to Wi-Fi network '$global:WiFiNetworkName'."
+            Play-FailureTone # Play failure tone
         }
     } catch {
-        Write-Debug "Failed to reconnect to Wi-Fi network '$global:WiFiNetworkName'. Error: $_"
+        Play-FailureTone # Play failure tone
     }
-}
-
-# Function to cancel the countdown
-function Cancel-Countdown {
-    Write-Debug "Cancellation requested. Exiting..."
-    $global:cancel = $true
 }
 
 # Function to prompt user to enter Wi-Fi network name (SSID)
@@ -36,8 +44,8 @@ function Prompt-SSID {
     $global:WiFiNetworkName = Read-Host "Please enter the name of your Wi-Fi network (SSID):"
 }
 
-# Display message
-Write-Host "Please enter the SSID of your Wi-Fi network."
+# Main script
+Write-Host "Welcome to the Wi-Fi Reconnector script."
 
 # Prompt user to enter Wi-Fi network name (SSID)
 Prompt-SSID
@@ -52,10 +60,8 @@ $global:cancel = $false
 # Countdown timer
 for ($i = 5; $i -gt 0; $i--) {
     if ($global:cancel) {
-        Cancel-Countdown
         exit
     }
-    Write-Host "Countdown: $i"
     Start-Sleep -Seconds 1
 }
 
